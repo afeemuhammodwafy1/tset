@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Not Found | Afee Muhammod Wafy</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Page not found. Return to the portfolio of Afee Muhammod Wafy.">
+    <meta name="robots" content="noindex, follow">
+    
+    <!-- Google Fonts (Space Grotesk) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome 6 Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        /* ═══════════════════════════════════════
+           ROOT VARIABLES - Minimal Dark Theme
+           ═══════════════════════════════════════ */
+        :root {
+            --bg-primary: #0d0d0d;
+            --bg-secondary: #141414;
+            --bg-card: #1a1a1a;
+            --text-primary: #f0f0f0;
+            --text-secondary: #a8a8a8;
+            --text-muted: #6a6a6a;
+            --border: rgba(255, 255, 255, 0.04);
+            --border-hover: rgba(255, 255, 255, 0.08);
+            --font: 'Space Grotesk', sans-serif;
+            --radius: 12px;
+            --transition: 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        /* ═══════════════════════════════════════
+           RESET & BASE
+           ═══════════════════════════════════════ */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            font-family: var(--font);
+            line-height: 1.7;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            overflow: hidden;
+        }
+
+        /* ═══════════════════════════════════════
+           SCROLLBAR
+           ═══════════════════════════════════════ */
+        ::-webkit-scrollbar {
+            width: 4px;
+        }
+        ::-webkit-scrollbar-track {
+            background: var(--bg-primary);
+        }
+        ::-webkit-scrollbar-thumb {
+            background: var(--text-muted);
+            border-radius: 10px;
+        }
+
+        /* ═══════════════════════════════════════
+           MAIN CONTAINER
+           ═══════════════════════════════════════ */
+        .error-container {
+            width: 100%;
+            max-width: 1100px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+            padding: 20px;
+            position: relative;
+        }
+
+        /* ═══════════════════════════════════════
+           LEFT SIDE - CONTENT
+           ═══════════════════════════════════════ */
+        .error-content {
+            text-align: left;
+        }
+
+        /* Brand / Logo */
+        .brand {
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            text-decoration: none;
+            letter-spacing: 2px;
+            display: inline-block;
+            margin-bottom: 36px;
+        }
+
+        .brand .accent {
+            color: var(--text-muted);
+        }
+
+        /* Status Code */
+        .error-code {
+            font-size: 0.75rem;
+            font-weight: 500;
+            color: var(--text-muted);
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            margin-bottom: 14px;
+        }
+
+        .error-code i {
+            margin-right: 6px;
+        }
+
+        /* Main Title */
+        .error-title {
+            font-size: 3.8rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            line-height: 1.1;
+            margin-bottom: 18px;
+            letter-spacing: -0.02em;
+        }
+
+        .error-title .highlight {
+            color: var(--text-secondary);
+            opacity: 0.6;
+        }
+
+        /* Description */
+        .error-description {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            margin-bottom: 4px;
+            max-width: 460px;
+        }
+
+        .error-hint {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            margin-bottom: 36px;
+        }
+
+        /* Button Group */
+        .btn-group {
+            display: flex;
+            gap: 14px;
+            flex-wrap: wrap;
+        }
+
+        .btn-home {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            padding: 13px 34px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            font-family: var(--font);
+            border-radius: 50px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: var(--transition);
+            background: var(--text-primary);
+            border: 1px solid var(--text-primary);
+            color: var(--bg-primary);
+        }
+
+        .btn-home:hover {
+            transform: translateY(-2px);
+            opacity: 0.85;
+        }
+
+        .btn-home i {
+            transition: transform 0.3s ease;
+        }
+
+        .btn-home:hover i {
+            transform: translateX(-4px);
+        }
+
+        /* Footer */
+        .error-footer {
+            margin-top: 48px;
+            font-size: 0.75rem;
+            color: var(--text-muted);
+        }
+
+        .error-footer a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            transition: color 0.3s ease;
+            border-bottom: 1px solid transparent;
+        }
+
+        .error-footer a:hover {
+            color: var(--text-primary);
+            border-bottom-color: var(--text-muted);
+        }
+
+        /* ═══════════════════════════════════════
+           RIGHT SIDE - VISUAL
+           ═══════════════════════════════════════ */
+        .error-visual {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        /* Background 404 Text */
+        .big-404 {
+            font-size: 12rem;
+            font-weight: 700;
+            line-height: 1;
+            color: var(--text-primary);
+            opacity: 0.02;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            white-space: nowrap;
+            user-select: none;
+            pointer-events: none;
+            letter-spacing: -0.04em;
+        }
+
+        /* Floating Icon Container */
+        .floating-icon {
+            position: relative;
+            z-index: 1;
+            width: 180px;
+            height: 180px;
+            background: var(--bg-card);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid var(--border);
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .floating-icon i {
+            font-size: 4.5rem;
+            color: var(--text-secondary);
+            animation: iconPulse 3s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-16px) rotate(1deg); }
+        }
+
+        @keyframes iconPulse {
+            0%, 100% { transform: scale(1); opacity: 0.6; }
+            50% { transform: scale(1.04); opacity: 1; }
+        }
+
+        /* Orbiting Dots */
+        .orbit-dot {
+            position: absolute;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: var(--text-muted);
+            opacity: 0.2;
+            animation: orbit 10s linear infinite;
+        }
+
+        .orbit-dot:nth-child(2) {
+            width: 6px;
+            height: 6px;
+            animation-delay: -3s;
+            animation-duration: 8s;
+            opacity: 0.15;
+        }
+
+        .orbit-dot:nth-child(3) {
+            width: 10px;
+            height: 10px;
+            animation-delay: -6s;
+            animation-duration: 12s;
+            opacity: 0.1;
+        }
+
+        @keyframes orbit {
+            0% { transform: rotate(0deg) translateX(130px) rotate(0deg); }
+            100% { transform: rotate(360deg) translateX(130px) rotate(-360deg); }
+        }
+
+        /* ═══════════════════════════════════════
+           RESPONSIVE
+           ═══════════════════════════════════════ */
+
+        /* ─── Tablets ─── */
+        @media (max-width: 968px) {
+            .error-container {
+                grid-template-columns: 1fr;
+                gap: 30px;
+                padding: 20px;
+                text-align: center;
+                max-height: 100vh;
+                overflow-y: auto;
+            }
+
+            .error-content {
+                text-align: center;
+                order: 2;
+            }
+
+            .error-visual {
+                order: 1;
+            }
+
+            .error-description {
+                max-width: 100%;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .btn-group {
+                justify-content: center;
+            }
+
+            .error-title {
+                font-size: 3rem;
+            }
+
+            .floating-icon {
+                width: 150px;
+                height: 150px;
+            }
+
+            .floating-icon i {
+                font-size: 3.8rem;
+            }
+
+            .big-404 {
+                font-size: 8rem;
+            }
+
+            @keyframes orbit {
+                0% { transform: rotate(0deg) translateX(110px) rotate(0deg); }
+                100% { transform: rotate(360deg) translateX(110px) rotate(-360deg); }
+            }
+        }
+
+        /* ─── Mobile ─── */
+        @media (max-width: 600px) {
+            body {
+                padding: 12px;
+                overflow: auto;
+                align-items: flex-start;
+                padding-top: 30px;
+            }
+
+            .error-container {
+                gap: 20px;
+                padding: 10px;
+                max-height: none;
+                overflow-y: visible;
+            }
+
+            .error-title {
+                font-size: 2.4rem;
+            }
+
+            .error-code {
+                font-size: 0.7rem;
+                letter-spacing: 2px;
+            }
+
+            .error-description {
+                font-size: 0.95rem;
+            }
+
+            .error-hint {
+                font-size: 0.85rem;
+                margin-bottom: 28px;
+            }
+
+            .floating-icon {
+                width: 120px;
+                height: 120px;
+            }
+
+            .floating-icon i {
+                font-size: 3rem;
+            }
+
+            .big-404 {
+                font-size: 5rem;
+            }
+
+            .btn-home {
+                padding: 12px 24px;
+                font-size: 0.85rem;
+                width: 100%;
+                justify-content: center;
+            }
+
+            .btn-group {
+                flex-direction: column;
+                width: 100%;
+                gap: 10px;
+            }
+
+            @keyframes orbit {
+                0% { transform: rotate(0deg) translateX(85px) rotate(0deg); }
+                100% { transform: rotate(360deg) translateX(85px) rotate(-360deg); }
+            }
+
+            .brand {
+                font-size: 1.3rem;
+                margin-bottom: 22px;
+            }
+
+            .error-footer {
+                margin-top: 28px;
+                font-size: 0.7rem;
+            }
+
+            .orbit-dot {
+                width: 6px;
+                height: 6px;
+            }
+
+            .orbit-dot:nth-child(3) {
+                width: 8px;
+                height: 8px;
+            }
+        }
+
+        /* ─── Small Phones ─── */
+        @media (max-width: 400px) {
+            .error-title {
+                font-size: 2rem;
+            }
+
+            .floating-icon {
+                width: 100px;
+                height: 100px;
+            }
+
+            .floating-icon i {
+                font-size: 2.5rem;
+            }
+
+            .big-404 {
+                font-size: 4rem;
+            }
+
+            .btn-home {
+                padding: 10px 18px;
+                font-size: 0.8rem;
+            }
+
+            @keyframes orbit {
+                0% { transform: rotate(0deg) translateX(70px) rotate(0deg); }
+                100% { transform: rotate(360deg) translateX(70px) rotate(-360deg); }
+            }
+
+            .brand {
+                font-size: 1.1rem;
+                margin-bottom: 18px;
+            }
+        }
+
+        /* ─── Landscape Mode ─── */
+        @media (max-height: 500px) and (orientation: landscape) {
+            body {
+                align-items: center;
+                padding: 16px;
+            }
+
+            .error-container {
+                grid-template-columns: 1fr 1fr;
+                gap: 20px;
+                padding: 10px;
+            }
+
+            .error-content {
+                text-align: left;
+                order: 1;
+            }
+
+            .error-visual {
+                order: 2;
+            }
+
+            .error-title {
+                font-size: 2rem;
+            }
+
+            .floating-icon {
+                width: 100px;
+                height: 100px;
+            }
+
+            .floating-icon i {
+                font-size: 2.8rem;
+            }
+
+            .big-404 {
+                font-size: 4rem;
+            }
+
+            .brand {
+                font-size: 1.1rem;
+                margin-bottom: 14px;
+            }
+
+            .error-description {
+                font-size: 0.85rem;
+            }
+
+            .error-hint {
+                font-size: 0.75rem;
+                margin-bottom: 18px;
+            }
+
+            .btn-home {
+                padding: 10px 20px;
+                font-size: 0.8rem;
+            }
+
+            .error-footer {
+                margin-top: 18px;
+                font-size: 0.65rem;
+            }
+
+            @keyframes orbit {
+                0% { transform: rotate(0deg) translateX(70px) rotate(0deg); }
+                100% { transform: rotate(360deg) translateX(70px) rotate(-360deg); }
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="error-container">
+        
+        <!-- ═══ LEFT SIDE: CONTENT ═══ -->
+        <div class="error-content">
+            
+            <!-- Brand -->
+            <a href="https://www.amwafy.xyz/" class="brand">
+                WAFY<span class="accent">.</span>
+            </a>
+
+            <!-- Status -->
+            <div class="error-code">
+                <i class="fa-solid fa-circle-exclamation"></i>
+                404 Error
+            </div>
+
+            <!-- Title -->
+            <h1 class="error-title">
+                Page Not<br><span class="highlight">Found</span>
+            </h1>
+
+            <!-- Description -->
+            <p class="error-description">
+                The page you're looking for doesn't exist or has been moved.
+            </p>
+            <p class="error-hint">
+                Let's get you back on track.
+            </p>
+
+            <!-- Button -->
+            <div class="btn-group">
+                <a href="https://www.amwafy.xyz/" class="btn-home">
+                    <i class="fa-solid fa-house"></i>
+                    Back to Home
+                </a>
+            </div>
+
+            <!-- Footer -->
+            <div class="error-footer">
+                &copy; 2026 Wafy — Built with ❤️ &amp; passion for technology
+            </div>
+
+        </div>
+
+        <!-- ═══ RIGHT SIDE: VISUAL ═══ -->
+        <div class="error-visual">
+            
+            <!-- Background 404 -->
+            <div class="big-404">404</div>
+
+            <!-- Floating Icon -->
+            <div class="floating-icon">
+                <i class="fa-solid fa-satellite-dish"></i>
+            </div>
+
+            <!-- Orbiting Dots -->
+            <div class="orbit-dot"></div>
+            <div class="orbit-dot"></div>
+            <div class="orbit-dot"></div>
+
+        </div>
+
+    </div>
+
+</body>
+</html>
