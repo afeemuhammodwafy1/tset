@@ -43,8 +43,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Font Awesome 6.5+ (supports X/Twitter icon) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="style.css">
@@ -105,7 +105,7 @@
 
     <!-- ✦ MOBILE NAV ✦ -->
     <div class="mobile-nav" id="mobileNav">
-        <a href="#home" class="mobile-nav-link" data-section="home">
+        <a href="#home" class="mobile-nav-link active" data-section="home">
             <i class="fa-solid fa-house"></i> Home
         </a>
         <a href="#about" class="mobile-nav-link" data-section="about">
@@ -123,7 +123,7 @@
         <a href="#certifications" class="mobile-nav-link" data-section="certifications">
             <i class="fa-solid fa-certificate"></i> Certifications
         </a>
-        <a href="cv.pdf" download class="mobile-nav-link resume-mobile">
+        <a href="cv.pdf" download target="_blank" class="mobile-nav-link resume-mobile">
             <i class="fa-solid fa-file-pdf"></i> Resume
         </a>
     </div>
@@ -133,55 +133,39 @@
 
         <!-- ═══ HERO ═══ -->
         <section id="home" class="section hero">
-            <div class="hero-grid">
-                <div class="hero-text">
-                    <div class="hero-tag">
-                        <span class="pulse-dot"></span>
-                        Available for collab
-                    </div>
-                    <h1 class="hero-name">
-                        <span class="name-line">Afee</span>
-                        <span class="name-line">Muhammod</span>
-                        <span class="name-line highlight">Wafy</span>
-                    </h1>
-                    <div class="hero-role">
-                        <span class="role-bracket">⟨</span>
-                        <span class="role-text" id="roleText">Science Student</span>
-                        <span class="role-bracket">⟩</span>
-                    </div>
-                    <p class="hero-desc">
-                        Building foundation in computer systems, modern web development, 
-                        and defensive security. Currently pursuing Science with a focus 
-                        on practical applications.
-                    </p>
-                    <div class="hero-actions">
-                        <a href="#projects" class="btn-primary">
-                            View My Work
-                            <i class="fa-solid fa-arrow-right"></i>
-                        </a>
-                        <a href="#footer" class="btn-secondary">
-                            Let's Connect
-                        </a>
-                    </div>
-                    <div class="hero-social">
-                        <a href="https://github.com/afeemuhammodwafy1" target="_blank"><i class="fa-brands fa-github"></i></a>
-                        <a href="https://linkedin.com/in/afeemuhammodwafy1" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
-                        <a href="https://wa.me/8801644568471" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
-                        <a href="mailto:afeemuhammodwafy@gmail.com"><i class="fa-solid fa-envelope"></i></a>
-                    </div>
+            <div class="hero-content-center">
+                <div class="hero-tag">
+                    <span class="pulse-dot green-dot"></span>
+                    Available
                 </div>
-                <div class="hero-visual">
-                    <div class="hero-orb"></div>
-                    <div class="hero-orb-2"></div>
-                    <div class="hero-orb-3"></div>
-                    <div class="hero-code-block">
-                        <div class="code-line"><span class="code-purple">const</span> <span class="code-cyan">wafy</span> = {</div>
-                        <div class="code-line indent"><span class="code-pink">role</span>: <span class="code-green">"Developer"</span>,</div>
-                        <div class="code-line indent"><span class="code-pink">focus</span>: <span class="code-green">"Security + AI"</span>,</div>
-                        <div class="code-line indent"><span class="code-pink">status</span>: <span class="code-green">"Building"</span></div>
-                        <div class="code-line">};</div>
-                        <div class="code-line"><span class="code-purple">console</span>.<span class="code-cyan">log</span>(<span class="code-green">"🚀 Ready"</span>);</div>
-                    </div>
+                <h1 class="hero-name">
+                    Afee Muhammod Wafy
+                </h1>
+                <div class="hero-role">
+                    <span class="role-bracket">⟨</span>
+                    <span class="role-text" id="roleText">Front-End Developer</span>
+                    <span class="role-bracket">⟩</span>
+                </div>
+                <p class="hero-desc">
+                    Building foundation in computer systems, modern web development, 
+                    and defensive security. Currently pursuing Science with a focus 
+                    on practical applications.
+                </p>
+                <div class="hero-actions">
+                    <a href="#projects" class="btn-primary">
+                        View My Work
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                    <a href="#footer" class="btn-secondary">
+                        Let's Connect
+                    </a>
+                </div>
+                <div class="hero-social">
+                    <a href="https://github.com/afeemuhammodwafy1" target="_blank"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://linkedin.com/in/afeemuhammodwafy1" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="https://wa.me/8801644568471" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+                    <a href="https://twitter.com/muhammodwafy" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href="mailto:afeemuhammodwafy@gmail.com"><i class="fa-solid fa-envelope"></i></a>
                 </div>
             </div>
             <div class="scroll-indicator">
@@ -278,13 +262,13 @@
 
                 <div class="skill-group">
                     <div class="skill-group-header">
-                        <i class="fa-solid fa-file-invoice"></i>
-                        <h3>MS Office Suite</h3>
+                        <i class="fa-solid fa-tools"></i>
+                        <h3>Tools & OS</h3>
                     </div>
                     <div class="skill-tags">
-                        <span>MS Word</span>
-                        <span>MS Excel</span>
-                        <span>MS PowerPoint</span>
+                        <span>Linux</span>
+                        <span>VS Code</span>
+                        <span>GitHub</span>
                     </div>
                 </div>
             </div>
@@ -367,7 +351,7 @@
                             <span class="edu-badge">Current</span>
                         </div>
                         <h3 class="edu-title">Higher Secondary Certificate (HSC)</h3>
-                        <p class="edu-meta">Science Focus</p>
+                        <p class="edu-meta">Science</p>
                         <p class="edu-desc">Concentrating on foundational science and mathematics electives, strengthening quantitative reasoning and logical analysis skills essential for higher computing studies.</p>
                     </div>
                 </div>
@@ -380,7 +364,7 @@
                             <span class="edu-badge done">Completed</span>
                         </div>
                         <h3 class="edu-title">Secondary School Certificate (SSC)</h3>
-                        <p class="edu-meta">Science Discipline</p>
+                        <p class="edu-meta">Science</p>
                         <p class="edu-desc">Completed secondary science curriculum with balanced performance, establishing foundational knowledge in physics, chemistry, mathematics, and introductory computer technologies.</p>
                     </div>
                 </div>
