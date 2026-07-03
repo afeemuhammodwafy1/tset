@@ -171,11 +171,17 @@ body {
 
 .sidebar-resume i {
     font-size: 1.1rem;
+    color: var(--text-secondary);
 }
 
 .sidebar-resume:hover {
     color: var(--text-secondary);
     background: rgba(255, 255, 255, 0.02);
+}
+
+.sidebar-resume span {
+    font-size: 0.45rem;
+    letter-spacing: 0.5px;
 }
 
 /* ═══════════════════════════════════════
@@ -292,7 +298,11 @@ body {
 }
 
 .resume-mobile i {
-    color: var(--text-light) !important;
+    color: var(--text-secondary) !important;
+}
+
+.resume-mobile span {
+    font-size: 0.9rem;
 }
 
 /* ═══════════════════════════════════════
@@ -367,14 +377,14 @@ body {
     margin-bottom: 20px;
 }
 
-/* ─── Available Green Dot (NEW) ─── */
+/* ─── Available Green Dot ─── */
 .pulse-dot {
     width: 8px;
     height: 8px;
     border-radius: 50%;
     background: #22c55e;
     display: inline-block;
-    box-shadow: 0 0 10px rgba(34, 197, 94, 0.5);
+    box-shadow: 0 0 12px rgba(34, 197, 94, 0.6);
     animation: pulse-green 2s ease-in-out infinite;
 }
 
@@ -382,12 +392,12 @@ body {
     0%, 100% {
         opacity: 1;
         transform: scale(1);
-        box-shadow: 0 0 10px rgba(34, 197, 94, 0.5);
+        box-shadow: 0 0 12px rgba(34, 197, 94, 0.6);
     }
     50% {
-        opacity: 0.6;
-        transform: scale(1.15);
-        box-shadow: 0 0 20px rgba(34, 197, 94, 0.3);
+        opacity: 0.7;
+        transform: scale(1.2);
+        box-shadow: 0 0 24px rgba(34, 197, 94, 0.3);
     }
 }
 
