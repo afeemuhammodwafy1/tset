@@ -185,7 +185,7 @@ body {
 }
 
 /* ═══════════════════════════════════════
-   MOBILE HEADER & NAV
+   MOBILE HEADER & NAV (মোবাইল ওভারল্যাপ ফিক্সড)
    ═══════════════════════════════════════ */
 .mobile-header {
     display: none;
@@ -193,10 +193,9 @@ body {
     top: 0;
     left: 0;
     right: 0;
-    z-index: 90;
+    z-index: 1000; /* মেনুর চেয়ে ১ বেশি যাতে এটি উপরে থাকে */
     padding: 14px 20px;
-    background: rgba(13, 13, 13, 0.95);
-    backdrop-filter: blur(16px);
+    background: #0d0d0d;
     border-bottom: 1px solid var(--border);
     justify-content: space-between;
     align-items: center;
@@ -243,9 +242,8 @@ body {
     top: 58px;
     left: 0;
     right: 0;
-    z-index: 89;
-    background: rgba(13, 13, 13, 0.98);
-    backdrop-filter: blur(16px);
+    z-index: 999; /* হাই ভ্যালু দেওয়া হলো যেন কন্টেন্ট নিচে চাপা পড়ে */
+    background: #0d0d0d; /* সলিড ব্যাকগ্রাউন্ড যাতে নিচের কিছু দেখা না যায় */
     padding: 16px 20px 20px;
     border-bottom: 1px solid var(--border);
     flex-direction: column;
@@ -345,7 +343,7 @@ body {
 }
 
 /* ═══════════════════════════════════════
-   HERO - CENTERED
+   HERO
    ═══════════════════════════════════════ */
 .hero {
     padding-top: 100px;
@@ -377,7 +375,6 @@ body {
     margin-bottom: 20px;
 }
 
-/* ─── Available Green Dot ─── */
 .pulse-dot {
     width: 8px;
     height: 8px;
@@ -506,7 +503,6 @@ body {
     transform: translateY(-2px);
 }
 
-/* ─── Scroll Indicator ─── */
 .scroll-indicator {
     display: flex;
     flex-direction: column;
@@ -991,7 +987,7 @@ body {
 }
 
 /* ═══════════════════════════════════════
-   RESPONSIVE
+   RESPONSIVE MEDIA QUERIES
    ═══════════════════════════════════════ */
 
 /* ─── Tablets ─── */
