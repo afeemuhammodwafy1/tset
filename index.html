@@ -43,7 +43,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-    <!-- Font Awesome 6.5+ -->
+    <!-- Font Awesome 6.5+ (supports X/Twitter icon) -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
     <!-- Custom CSS -->
@@ -86,8 +86,8 @@
         </nav>
 
         <div class="sidebar-footer">
-            <a href="cv.pdf" download="Afee_Muhammod_Wafy_Resume.pdf" class="sidebar-resume" id="sidebarResume">
-                <i class="fa-solid fa-file-lines"></i>
+            <a href="cv.pdf" download class="sidebar-resume">
+                <i class="fa-solid fa-file-pdf"></i>
                 <span>Resume</span>
             </a>
         </div>
@@ -123,8 +123,8 @@
         <a href="#certifications" class="mobile-nav-link" data-section="certifications">
             <i class="fa-solid fa-certificate"></i> Certifications
         </a>
-        <a href="cv.pdf" download="Afee_Muhammod_Wafy_Resume.pdf" class="mobile-nav-link resume-mobile" id="mobileResume">
-            <i class="fa-solid fa-file-lines"></i> Resume (PDF)
+        <a href="cv.pdf" download class="mobile-nav-link resume-mobile">
+            <i class="fa-solid fa-file-pdf"></i> Resume
         </a>
     </div>
 
@@ -334,6 +334,25 @@
                         <span>CSS</span>
                     </div>
                 </div>
+
+                <!-- Project 4 - NEW AstroWafy -->
+                <div class="project-card">
+                    <div class="project-top">
+                        <div class="project-icon"><i class="fa-solid fa-rocket"></i></div>
+                        <div class="project-links-top">
+                            <a href="https://github.com/afeemuhammodwafy1/astrowafy" target="_blank"><i class="fa-brands fa-github"></i></a>
+                            <a href="https://astro.amwafy.xyz/" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                        </div>
+                    </div>
+                    <h3 class="project-title">AstroWafy</h3>
+                    <p class="project-desc">An automated web application that connects directly with NASA's APOD (Astronomy Picture of the Day) API to bring the wonders of the cosmos to users in real-time, featuring daily updated space imagery and comprehensive astronomical data.</p>
+                    <div class="project-tags">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>JS</span>
+                        <span>NASA APOD API</span>
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -433,11 +452,8 @@
                     <a href="https://twitter.com/muhammodwafy" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
                     <a href="https://instagram.com/afeemuhammodwafy" target="_blank"><i class="fa-brands fa-instagram"></i></a>
                     <a href="https://facebook.com/afeemuhammodwafy" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
-                    <a href="mailto:afeemuhammodwafy@gmail.com" 
-   onclick="navigator.clipboard.writeText('afeemuhammodwafy@gmail.com'); alert('Email address copied to clipboard!');">
-   <i class="fa-solid fa-envelope"></i>
-</a>
-
+                    <a href="mailto:afeemuhammodwafy@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+                </div>
                 
                 <div class="footer-divider"></div>
                 <p class="copyright">&copy; 2026 Wafy — Built with ❤️ &amp; passion for technology</p>
@@ -451,9 +467,9 @@
         <i class="fa-solid fa-chevron-up"></i>
     </button>
 
-    <!-- ✦ ALL JAVASCRIPT ✦ -->
+    <!-- Custom JS -->
     <script>
-        // 1. MOBILE MENU TOGGLE
+        // ─── Mobile Menu ───
         const menuBtn = document.getElementById('menuBtn');
         const mobileNav = document.getElementById('mobileNav');
 
@@ -469,7 +485,7 @@
             });
         });
 
-        // 2. TYPING EFFECT FOR ROLE
+        // ─── Role Typing ───
         const roles = ["Science Student", "Cybersecurity Enthusiast", "Front-End Developer", "AI & Tech Explorer"];
         let roleIndex = 0, charIndex = 0, isDeleting = false;
         const roleEl = document.getElementById('roleText');
@@ -498,7 +514,7 @@
         }
         typeRole();
 
-        // 3. ACTIVE NAV LINK ON SCROLL
+        // ─── Active Nav Link ───
         const sections = document.querySelectorAll('.section');
         const navLinks = document.querySelectorAll('.nav-link');
         const mobileLinks = document.querySelectorAll('.mobile-nav-link');
@@ -517,7 +533,7 @@
             setActive(current);
         });
 
-        // 4. BACK TO TOP BUTTON
+        // ─── Back to Top ───
         const backTop = document.getElementById('backTop');
         window.addEventListener('scroll', () => {
             backTop.classList.toggle('visible', window.scrollY > 400);
@@ -526,48 +542,14 @@
             window.scrollTo({ top: 0, behavior: 'smooth' });
         });
 
-        // 5. SMOOTH SCROLL FOR NAV LINKS
+        // ─── Smooth Scroll for Nav ───
         document.querySelectorAll('.nav-link, .mobile-nav-link').forEach(link => {
             link.addEventListener('click', (e) => {
-                if (link.hasAttribute('download')) return;
                 e.preventDefault();
                 const target = document.querySelector(link.getAttribute('href'));
                 if (target) target.scrollIntoView({ behavior: 'smooth' });
             });
         });
-
-        // 6. RESUME DOWNLOAD FIX FOR MOBILE (ডাবল ট্যাব ফিক্সড)
-        function forceDownload(url, fileName) {
-            const link = document.createElement('a');
-            link.href = url;
-            link.download = fileName;
-            link.target = '_blank'; 
-            document.body.appendChild(link);
-            link.click();
-            document.body.removeChild(link);
-        }
-
-        const sidebarResume = document.getElementById('sidebarResume');
-        if (sidebarResume) {
-            sidebarResume.addEventListener('click', function(e) {
-                e.preventDefault();
-                const url = this.getAttribute('href');
-                const fileName = this.getAttribute('download') || 'Afee_Muhammod_Wafy_Resume.pdf';
-                forceDownload(url, fileName);
-            });
-        }
-
-        const mobileResume = document.getElementById('mobileResume');
-        if (mobileResume) {
-            mobileResume.addEventListener('click', function(e) {
-                e.preventDefault();
-                const url = this.getAttribute('href');
-                const fileName = this.getAttribute('download') || 'Afee_Muhammod_Wafy_Resume.pdf';
-                forceDownload(url, fileName);
-            });
-        }
-
-        console.log('✅ WAFY Portfolio Loaded Successfully!');
     </script>
 </body>
 </html>
